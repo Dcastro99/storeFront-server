@@ -20,6 +20,21 @@ db.once('open', function () {
 
 const ITEM = require('./src/models/items');
 
+//---------------HOME ROUTE-------------------//
+app.get('/', handleGetAllItems);
+
+
+async function handleGetAllItems(req, res) {
+  try {
+    const items = await ITEM.find();
+
+    res.status(200).send(items);
+  } catch (error) {
+    console.error(error);
+    res.status(400).send('Could not find items');
+  }
+}
+
 
 app.get('/', (request, response) => {
   response.send('TESTING STOREFRONT!');

@@ -20,9 +20,11 @@ db.once('open', function () {
 
 const ITEM = require('./src/models/items');
 
+
+
 //---------------HOME ROUTE-------------------//
 app.get('/', handleGetAllItems);
-
+app.put('/item/:id', handleUpdateItem);
 
 async function handleGetAllItems(req, res) {
   try {
@@ -34,6 +36,27 @@ async function handleGetAllItems(req, res) {
     res.status(400).send('Could not find items');
   }
 }
+
+//         { UPDATES ITEMS }         //
+async function handleUpdateItem(req, res) {
+  console.log('UPDATED!!::', req.params)
+  const { id } = req.params;
+  try {
+    const item = await ITEM.findOne({ _id: id });
+    if (!item) res.status(400).send('unable to update item');
+    else {
+      const updateditem = await ITEM.findByIdAndUpdate(
+        id,
+        { ...req.body },
+        { new: true, overwrite: true },
+      );
+      res.status(200).send(updateditem);
+    }
+  } catch (e) {
+    res.status(500).send('server error');
+  }
+}
+
 
 
 app.get('/', (request, response) => {

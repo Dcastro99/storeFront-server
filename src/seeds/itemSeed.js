@@ -14,7 +14,7 @@ const seed = async () => {
     category: "electronics",
     price: 200,
     inventory: 200,
-    image: 'https://ibb.co/S5KQ7Zs',
+    image: 'https://i.imgur.com/nhmzJiu.jpg',
   });
   await item.create({
     name: "XBOX Controller",
@@ -22,7 +22,7 @@ const seed = async () => {
     category: "games",
     price: 75,
     inventory: 100,
-    image: 'https://ibb.co/NsRMRXw',
+    image: 'https://i.imgur.com/tYRpBsz.jpg',
   });
   await item.create({
     name: "Beanie",
@@ -30,7 +30,7 @@ const seed = async () => {
     category: "apperal",
     price: 15,
     inventory: 100,
-    image: 'https://ibb.co/tK58nZN'
+    image: 'https://i.imgur.com/CJ9mKJT.jpg'
   });
   await item.create({
     name: "Record Player",
@@ -38,7 +38,7 @@ const seed = async () => {
     category: "electronics",
     price: 175,
     inventory: 100,
-    image: 'https://ibb.co/BKtNdgX',
+    image: 'https://i.imgur.com/ffflRGY.jpg',
   });
   await item.create({
     name: "Little Nightmares II",
@@ -46,7 +46,7 @@ const seed = async () => {
     category: "games",
     price: 60,
     inventory: 50,
-    image: 'https://ibb.co/tKh6Y7y',
+    image: 'https://i.imgur.com/py7FKPP.jpg',
   });
   await item.create({
     name: "Hunting knife",
@@ -54,7 +54,7 @@ const seed = async () => {
     category: "weapons",
     price: 6000,
     inventory: 3,
-    image: 'https://ibb.co/myYh2wt',
+    image: 'https://i.imgur.com/Fr0M72O.jpg',
   });
   await item.create({
     name: "Bow & Arrow",
@@ -62,7 +62,7 @@ const seed = async () => {
     category: "weapons",
     price: 200,
     inventory: 5,
-    image: 'https://ibb.co/NnhBgyY',
+    image: 'https://i.imgur.com/81Hv5UF.jpg',
   });
   await item.create({
     name: "Hat",
@@ -70,7 +70,7 @@ const seed = async () => {
     category: "apperal",
     price: 30,
     inventory: 2,
-    image: 'https://ibb.co/bLS4LfF',
+    image: 'https://i.imgur.com/CrJuJbD.jpg',
   });
 
   console.log('Seeded database!');
